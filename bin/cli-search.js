@@ -399,7 +399,7 @@ const main = async (args) => {
           daysRemaining = terminate // Reset termination counter
         }
         const placeholders = helpers.createPlaceholders(results, { cabins: Object.values(fp.cabins) })
-        helpers.saveAwards(requestId, awards, placeholders)
+        helpers.saveAwards(requestId, awards, placeholders, query)
       }
     }
     if (skipped > 0) {
