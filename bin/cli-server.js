@@ -18,6 +18,19 @@ app.get('/api/config', async (req, res, next) => {
       return { id, name, website, fares }
     })
 
+    const logos = [
+      ...engines,
+      { id: 'AF' },
+      { id: 'AZ' },
+      { id: 'EY' },
+      { id: 'JL' },
+      { id: 'QF' },
+      { id: 'AI' },
+      { id: 'ET' },
+      { id: 'QR' },
+      { id: 'EK' }
+    ]
+
     // Get list of all aircraft and airlines
     const aircraft = fp.aircraft
     const airlines = fp.airlines
@@ -30,7 +43,7 @@ app.get('/api/config', async (req, res, next) => {
       { value: fp.cabins.economy, label: 'Economy' }
     ]
 
-    res.send({engines, aircraft, airlines, cabins})
+    res.send({engines, aircraft, airlines, cabins, logos})
   } catch (err) {
     next(err)
   }

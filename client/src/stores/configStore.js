@@ -9,6 +9,10 @@ export default class ConfigStore {
     this.load()
   }
 
+  @computed get logos () {
+    return this.loading ? null : this.config.logos
+  }
+
   @computed get engines () {
     return this.loading ? null : this.config.engines
   }

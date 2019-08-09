@@ -195,8 +195,8 @@ class Awards extends Component {
 
   renderSegment (segment, itinerary) {
     const { airline, flight, aircraft, mixed, departure, arrival, fromCity, toCity, duration, stops, lagDays } = segment
-    const { airlines, engines } = this.props.configStore
-    const logo = engines.find(x => x.id === airline) ? airline.toLowerCase() : 'zz'
+    const { airlines, logos } = this.props.configStore
+    const logo = logos.find(x => x.id === airline) ? airline.toLowerCase() : 'zz'
     const airlineInfo = airlines.find(x => x.iata === airline)
     const airlineName = airlineInfo ? airlineInfo.name : airline
 
