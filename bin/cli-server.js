@@ -37,7 +37,9 @@ app.get('/api/config', async (req, res, next) => {
       { id: 'LH' },
       { id: 'BR' },
       { id: 'UA' },
-      { id: 'AY' }
+      { id: 'AY' },
+      { id: 'EI' },
+      { id: 'MH' }
     ]
 
     // Get list of all aircraft and airlines
